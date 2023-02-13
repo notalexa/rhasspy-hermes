@@ -305,6 +305,8 @@ class AsrTrainSuccess(Message):
     TOPIC_PATTERN = re.compile(r"^rhasspy/asr/([^/]+)/trainSuccess$")
 
     id: typing.Optional[str] = None
+    model_url: typing.Optional[str] = None
+    model_md5: typing.Optional[str] = None
 
     @classmethod
     def is_site_in_topic(cls) -> bool:
